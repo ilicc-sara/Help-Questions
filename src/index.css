@@ -35,6 +35,7 @@ button {
 }
 button:hover {
   border-color: #646cff;
+  transform: scale(1.1);
 }
 
 .container {
@@ -52,7 +53,7 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 }
 
 .question-item {
