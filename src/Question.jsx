@@ -1,16 +1,20 @@
 import React, { useState } from "react";
 
 const Question = (props) => {
-  console.log(props);
-
+  const { question, answer, showAnswer, setVisibility } = props;
   return (
     <li class="question-item">
       <div class="question-cont">
-        {props.question}
-        <button class="show-btn">+</button>{" "}
+        {question}
+        <button
+          class="show-btn"
+          onClick={() => setVisibility((prevVisibility) => !prevVisibility)}
+        >
+          {showAnswer ? "-" : "+"}
+        </button>{" "}
       </div>
 
-      <div class="answer-cont">{props.answer}</div>
+      <div class={`answer-cont ${showAnswer ? "" : "hidden"}`}>{answer}</div>
     </li>
   );
 };

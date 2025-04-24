@@ -19,19 +19,6 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
 h2 {
   margin-top: -10px;
   margin-bottom: 20px;
@@ -51,9 +38,11 @@ button:hover {
 }
 
 .container {
+  margin: 0 auto;
   background-color: #747bff;
   width: 800px;
   padding: 20px 0;
+  border-radius: 5px;
 }
 
 .questions-list {
@@ -71,8 +60,10 @@ button:hover {
   width: 90%;
   flex-direction: column;
   gap: 10px;
-  border: 1px solid rgb(32, 29, 55);
+  /* border: 1px solid rgb(32, 29, 55); */
+  box-shadow: 0 0 5px rgb(32, 29, 55, 0.5);
   padding: 20px;
+  border-radius: 3px;
 }
 
 .question-cont {
@@ -80,6 +71,8 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .show-btn {
