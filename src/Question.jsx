@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Question = (props) => {
-  const { question, answer, showAnswer, setVisibility } = props;
+  const [showAnswer, setVisibility] = useState(false);
+  const { question, answer, id } = props;
   return (
     <li class="question-item">
       <div class="question-cont">
