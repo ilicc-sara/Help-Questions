@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Question from "./Question.jsx";
 
 const info = [
   {
@@ -34,9 +35,18 @@ function App() {
 
   return (
     <>
-      <h3>{info[0].question}</h3>
-
-      <h6>{info[0].answer}</h6>
+      <div class="container">
+        <h2>Questions</h2>
+        <ul class="questions-list">
+          {info.map((question) => (
+            <Question
+              key={crypto.randomUUID()}
+              question={question.question}
+              answer={question.answer}
+            />
+          ))}
+        </ul>
+      </div>
     </>
   );
 }
