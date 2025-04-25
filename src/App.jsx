@@ -51,9 +51,13 @@ function App() {
             return (
               <Question
                 key={question.id}
+                // question={question.question}
+                // answer={question.answer}
+                // id={question.id}
+                // isVisible={question.isVisible}
                 {...question}
-                // showAnswer={showAnswer}
-                // setVisibility={setVisibility}
+                questions={questions}
+                setQuestions={setQuestions}
               />
             );
           })}
